@@ -5,5 +5,5 @@ ReMePARK – Mexican Parkinson's Disease Registry. Multicenter, longitudinal coh
 Do not upload PHI or raw data.
 Scripts in scripts/; notebooks in notebooks/.
 
-## Licence
+## License
 Code: MIT. Documents/data: CC BY-NC 4.0.
