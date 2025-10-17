@@ -1,0 +1,16 @@
+# datos y salidas
+data/* 
+!data/**/.gitkeep
+outputs/
+# Python
+__pycache__/
+*.pyc
+.env
+# R
+.Rhistory
+.Rproj.user/
+# Jupyter
+*.ipynb_checkpoints/
+# SO
+.DS_Store
+Thumbs.db
