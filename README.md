@@ -87,6 +87,23 @@ Este módulo implementa el flujo completo de limpieza, integración y estandariz
 | **Persistencia del dataset final** | Exportación como `Remepark_cleaned_kpss.xlsx` listo para SPSS, R o Python. |
 
 ---
+## 🩺 KPPS Longitudinal Pain Analysis
+
+Este módulo evalúa la progresión del dolor en personas con Enfermedad de Parkinson utilizando la King’s Parkinson’s Disease Pain Scale (KPPS). A partir del dataset limpio generado por el módulo de procesamiento, se analiza la evolución del dolor entre la visita basal y la última visita disponible, así como la periodicidad del seguimiento clínico.
+
+📁 **Ubicación:** [`notebooks/Delta_KPPS.ipynb`](notebooks/Delta_KPPS.ipynb)
+
+### Contenido principal
+
+| Sección | Descripción |
+|--------|-------------|
+| **Cohorte longitudinal** | Selección de pacientes con ≥ 2 visitas y consolidación del dataset analítico. |
+| **Auditoría temporal** | Cálculo de intervalos entre visitas (TimeDelta) y estadísticas descriptivas del seguimiento. |
+| **Análisis Pre–Post** | Comparación entre Baseline y Endpoint, cálculo del cambio absoluto (Δ KPPS). |
+| **Pruebas estadísticas** | Shapiro–Wilk para normalidad y Wilcoxon Signed-Rank para evaluar significancia del cambio en dolor. |
+| **Caracterización transversal** | Resumen demográfico inicial (Tabla 1), severidad por visita y análisis descriptivo por cohorte. |
+
+---
 
 ### 🔧 Librerías utilizadas
 
