@@ -45,7 +45,7 @@ Este módulo implementa el procesamiento completo del instrumento **EQ-5D-5L**, 
 | Sección | Descripción |
 |--------|-------------|
 | **1. Validación EQ-5D-5L** | Control de rangos permitidos (1–5), consistencia entre dominios y detección de valores faltantes. |
-| **2. Crosswalk 5L→3L** | Implementación del algoritmo EuroQol (van Hout et al., 2012). |
+| **2. Crosswalk 5L** | Implementación del algoritmo EuroQol (Mexican Value Set, 2021). |
 | **3. Utility Index** | Cálculo del índice de utilidad usando valores poblacionales correspondientes. |
 | **4. Descriptivos y visualizaciones** | Distribuciones, boxplots, correlaciones internas y resumen estadístico. |
 | **5. Modelado longitudinal** | Pendiente anual del índice EQ-5D, curvas de progresión y modelos mixtos. |
