@@ -55,7 +55,7 @@ Este módulo implementa el procesamiento completo del instrumento **EQ-5D-5L**, 
 
 ## 🩺 Armonización NMSS → MDS-NMS
 
-Este módulo implementa el procesamiento completo del instrumento **EQ-5D-5L**, la conversión mediante **Crosswalk 5L→3L**, el cálculo de **índices de utilidad**, y análisis longitudinal de calidad de vida.
+Módulo para transformar puntajes **NMSS** en valores comparables con los dominios de la **MDS-NMS**, permitiendo análisis coherentes entre periodos del estudio con diferentes instrumentos.
 
 📁 **Ubicación:** [`notebooks/NMS_to_MDS_NMS.ipynb`](notebooks/NMS_to_MDS_NMS.ipynb)
 
@@ -68,6 +68,23 @@ Este módulo implementa el procesamiento completo del instrumento **EQ-5D-5L**, 
 | **3. Vinculación equipercentil** | Mapeo no paramétrico basado en igualación de percentiles. |
 | **4. Mapeo conceptual** | Correspondencia explícita entre los 9 dominios NMSS y las secciones de MDS-NMS. |
 | **5. Puntajes armonizados** | Exportación de dominios equivalentes para análisis longitudinal integrado. |
+
+---
+## 🩺 KPPS Pain Scale Processing
+
+Este módulo implementa el flujo completo de limpieza, integración y estandarización de la **King’s Parkinson’s Disease Pain Scale (KPPS)** para análisis individuales y longitudinales dentro de ReMePARK. Incluye validación estricta, fusión multidimensional con bases clínicas y generación de un dataset final listo para análisis estadístico.
+
+📁 **Ubicación:** [`notebooks/Preprocesamiento_KPPS.ipynb`](notebooks/Preprocesamiento_KPPS.ipynb)
+
+### Contenido principal
+
+| Sección | Descripción |
+|--------|-------------|
+| **Carga y limpieza de KPPS** | Importación desde Google Drive, filtrado de datos incompletos mediante listwise deletion. |
+| **Identificación de cohorte** | Conteo de sujetos únicos y detección de la subpoblación longitudinal (≥ 2 visitas). |
+| **Integración multidimensional** | Fusión con datos sociodemográficos, MDS-UPDRS y PDQ-39 mediante claves primarias combinadas. |
+| **Control de calidad** | Outer join para maximizar retención, eliminación de registros fantasma, auditoría de datos faltantes. |
+| **Persistencia del dataset final** | Exportación como `Remepark_cleaned_kpss.xlsx` listo para SPSS, R o Python. |
 
 ---
 
