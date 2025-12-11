@@ -53,30 +53,49 @@ Este módulo implementa el procesamiento completo del instrumento **EQ-5D-5L**, 
 
 ---
 
+## 🩺 Armonización NMSS → MDS-NMS
+
+Este módulo implementa el procesamiento completo del instrumento **EQ-5D-5L**, la conversión mediante **Crosswalk 5L→3L**, el cálculo de **índices de utilidad**, y análisis longitudinal de calidad de vida.
+
+📁 **Ubicación:** [`notebooks/Remepark_EQ5.ipynb`](notebooks/Remepark_EQ5.ipynb)
+
+### Contenido principal
+
+| Sección | Descripción |
+|--------|-------------|
+| **1. Normalización porcentual | Escalamiento lineal de puntajes NMSS y MDS-NMS al rango 0–100 %. |
+| **2. Estandarización Z-score | Conversión a desviaciones estándar para comparaciones relativas. |
+| **3. Vinculación equipercentil | Mapeo no paramétrico basado en igualación de percentiles. |
+| **4. Mapeo conceptual | Correspondencia explícita entre los 9 dominios NMSS y las secciones de MDS-NMS. |
+| **5. Puntajes armonizados | Exportación de dominios equivalentes para análisis longitudinal integrado. |
+
+---
+
 ### 🔧 Librerías utilizadas
 
-- `pandas`, `numpy`
-- `matplotlib`, `seaborn`
-- `statsmodels`
-- `lifelines` (si aplica)
+- Python 3.9+  
+- pandas, numpy  
+- matplotlib, seaborn  
+- statsmodels  
+- scikit-learn  
+- lifelines  
 
 ---
 
 
 ---
 
-## 🔒 Usage
+## 🔒 Uso
 
-- No subir **PHI** ni datos crudos identificables.  
-- Notebooks → `notebooks/`  
-- Scripts reproducibles → `scripts/`  
+**No subir información identificable o sensible.**  
+**Todos los cuadernos están diseñados para ejecutarse con datos anonimizados siguiendo la estructura definida en este repositorio.**
 
 ---
 
-## 📜 License
+## 📜 Licencia
 
-- **Code:** MIT  
-- **Documents / Derived data:** CC BY-NC 4.0  
+**Código bajo licencia MIT.** 
+**Documentos y resultados derivados bajo licencia CC BY-NC 4.0.**
 
 ---
 
