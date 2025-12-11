@@ -57,7 +57,7 @@ Este módulo implementa el procesamiento completo del instrumento **EQ-5D-5L**, 
 
 Este módulo implementa el procesamiento completo del instrumento **EQ-5D-5L**, la conversión mediante **Crosswalk 5L→3L**, el cálculo de **índices de utilidad**, y análisis longitudinal de calidad de vida.
 
-📁 **Ubicación:** [`notebooks/Remepark_EQ5.ipynb`](notebooks/Remepark_EQ5.ipynb)
+📁 **Ubicación:** [`notebooks/NMS_to_MDS_NMS.ipynb`](notebooks/NMS_to_MDS_NMS.ipynb)
 
 ### Contenido principal
 
