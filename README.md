@@ -1,43 +1,86 @@
 # ReMePARK
-ReMePARK – Mexican Parkinson's Disease Registry. Multicenter, longitudinal cohort capturing clinical, motor/non-motor, and treatment data to advance research and care. 
+ReMePARK – Mexican Parkinson's Disease Registry.  
+Multicenter, longitudinal cohort capturing clinical, motor/non-motor, quality-of-life, and treatment data to advance research and patient care.
+
 ---
 
 ## 🧠 MDS-UPDRS Validation & Longitudinal Analysis
 
 Este módulo forma parte del pipeline de análisis clínico y de calidad de datos del proyecto **ReMePARK**.  
-Contiene procedimientos reproducibles para validar, limpiar y analizar las puntuaciones **MDS-UPDRS (Partes I–IV)** de los participantes de la cohorte.
+Incluye procedimientos reproducibles para validar, limpiar y modelar las puntuaciones **MDS-UPDRS (Partes I–IV)**.
 
 📁 **Ubicación:** [`notebooks/mdsupdrs_validation/`](notebooks/mdsupdrs_validation)
 
 ### Contenido principal
 
 | Sección | Descripción |
-|:--------|:-------------|
-| **1. Validación estructural** | Identificación y verificación de columnas UPDRS I–IV; control de valores válidos (0–4). |
-| **2. Prorrateo y reglas de integridad** | Aplicación de criterios de Goetz et al. 2015 para manejo de ítems faltantes por parte. |
-| **3. Cálculo de puntajes** | Totales por parte y puntaje global MDS-UPDRS; clasificación de severidad leve–moderada–grave. |
-| **4. Métricas longitudinales** | Deltas, pendientes anuales y modelado mixto de progresión motora (Parte III). |
-| **5. MCID y progresión clínica** | Detección de cambios clínicamente importantes (MCID) y eventos de progresión ≥ 5 pts. |
-| **6. Time-to-event** | Implementación de modelos de supervivencia (Cox PH) para análisis de riesgo de progresión. |
+|--------|-------------|
+| **1. Validación estructural** | Identificación de columnas por parte (I–IV), control de tipos, valores y rangos válidos (0–4). |
+| **2. Prorrateo y reglas de integridad** | Implementación de criterios de Goetz et al., 2015 para manejo de ítems faltantes. |
+| **3. Cálculo de puntajes** | Totales por parte, puntaje global y clasificación leve–moderada–grave mediante triangulación de puntos de corte. |
+| **4. Métricas longitudinales** | Cálculo de deltas, tiempo en años, pendiente anual y métricas intraindividuales. |
+| **5. MCID y progresión clínica** | Detección de cambios clínicamente importantes y eventos de progresión (≥5 puntos en UPDRS III). |
+| **6. Modelos mixtos** | Estimación de pendientes individuales mediante modelos lineales mixtos con pendiente aleatoria por paciente. |
+| **7. Time-to-event** | Modelo de Cox Proportional Hazards para riesgo de progresión motora. |
 
 ---
 
-### 🔬 Tecnologías y librerías principales
+### 🔬 Tecnologías utilizadas
 
-- `pandas`, `numpy`, `matplotlib`, `seaborn`  
-- `statsmodels` (modelos lineales mixtos)  
-- `lifelines` (análisis de supervivencia)  
-- `scikit-learn` (métricas complementarias y regresiones auxiliares)
+- `pandas`, `numpy`, `matplotlib`, `seaborn`
+- `statsmodels` (modelos mixtos)
+- `lifelines` (CoxPH y supervivencia)
+- `scikit-learn`
 
 ---
 
-### 🧩 Estructura recomendada
+## 🩺 EQ-5D Crosswalk & Health Utility Analysis
+
+Este módulo implementa el procesamiento completo del instrumento **EQ-5D-5L**, la conversión mediante **Crosswalk 5L→3L**, el cálculo de **índices de utilidad**, y análisis longitudinal de calidad de vida.
+
+📁 **Ubicación:** [`notebooks/Remepark_EQ5.ipynb`](notebooks/Remepark_EQ5.ipynb)
+
+### Contenido principal
+
+| Sección | Descripción |
+|--------|-------------|
+| **1. Validación EQ-5D-5L** | Control de rangos permitidos (1–5), consistencia entre dominios y detección de valores faltantes. |
+| **2. Crosswalk 5L→3L** | Implementación del algoritmo EuroQol (van Hout et al., 2012). |
+| **3. Utility Index** | Cálculo del índice de utilidad usando valores poblacionales correspondientes. |
+| **4. Descriptivos y visualizaciones** | Distribuciones, boxplots, correlaciones internas y resumen estadístico. |
+| **5. Modelado longitudinal** | Pendiente anual del índice EQ-5D, curvas de progresión y modelos mixtos. |
+| **6. Integración clínica** | Asociación entre EQ-5D y escalas motoras/no motoras (UPDRS / NMS). |
+
+---
+
+### 🔧 Librerías utilizadas
+
+- `pandas`, `numpy`
+- `matplotlib`, `seaborn`
+- `statsmodels`
+- `lifelines` (si aplica)
+
+---
+
+
+---
+
+## 🔒 Usage
+
+- No subir **PHI** ni datos crudos identificables.  
+- Notebooks → `notebooks/`  
+- Scripts reproducibles → `scripts/`  
+
+---
+
+## 📜 License
+
+- **Code:** MIT  
+- **Documents / Derived data:** CC BY-NC 4.0  
+
+---
 
 
 
-## Usage
-Do not upload PHI or raw data.
-Scripts in scripts/; notebooks in notebooks/.
 
-## License
-Code: MIT. Documents/data: CC BY-NC 4.0.
+
