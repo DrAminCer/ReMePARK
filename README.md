@@ -63,11 +63,11 @@ Este módulo implementa el procesamiento completo del instrumento **EQ-5D-5L**, 
 
 | Sección | Descripción |
 |--------|-------------|
-| **1. Normalización porcentual | Escalamiento lineal de puntajes NMSS y MDS-NMS al rango 0–100 %. |
-| **2. Estandarización Z-score | Conversión a desviaciones estándar para comparaciones relativas. |
-| **3. Vinculación equipercentil | Mapeo no paramétrico basado en igualación de percentiles. |
-| **4. Mapeo conceptual | Correspondencia explícita entre los 9 dominios NMSS y las secciones de MDS-NMS. |
-| **5. Puntajes armonizados | Exportación de dominios equivalentes para análisis longitudinal integrado. |
+| **1. Normalización porcentual** | Escalamiento lineal de puntajes NMSS y MDS-NMS al rango 0–100 %. |
+| **2. Estandarización Z-score** | Conversión a desviaciones estándar para comparaciones relativas. |
+| **3. Vinculación equipercentil** | Mapeo no paramétrico basado en igualación de percentiles. |
+| **4. Mapeo conceptual** | Correspondencia explícita entre los 9 dominios NMSS y las secciones de MDS-NMS. |
+| **5. Puntajes armonizados** | Exportación de dominios equivalentes para análisis longitudinal integrado. |
 
 ---
 
