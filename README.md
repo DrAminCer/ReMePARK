@@ -125,7 +125,25 @@ Este módulo analiza la severidad del dolor y su progresión longitudinal utiliz
 
 ---
 
+## 🩺 KPPS MCID (Minimal Clinically Important Difference)
 
+Este módulo evalúa la relevancia clínica del cambio en el dolor utilizando la KPPS. A diferencia de los análisis previos que se centran en la significancia estadística, este módulo determina si la mejoría observada es suficientemente grande como para ser percibida por el paciente (MCID) y analiza los factores que predicen dicha mejoría.
+
+📁 **Ubicación:** [`notebooks/MCID_KPPS/`](notebooks/MCID_KPPS.ipynb)
+
+
+### Contenido principal
+
+| Sección | Descripción |
+|--------|-------------|
+| **Cálculo del cambio individual** | Estimación de Δ KPPS (Final – Basal) por sujeto. |
+| **Definición del umbral clínico** | MCID definido como reducción ≥ 3 puntos en el total KPPS. Clasificación en Respondedores vs No Respondedores. |
+| **Comparación entre grupos** | Mann–Whitney para predictores numéricos y Chi-Cuadrado (χ²) para predictores categóricos. |
+| **Identificación de predictores** | Variables demográficas y motoras asociadas con alcanzar el MCID (p < 0.05). |
+| **Visualizaciones** | Boxplots y gráficos comparativos entre respondedores y no respondedores. |
+| **Exportación** | Archivo enriquecido con la variable MCID_Response (`Yes/No`). |
+
+---
 
 ### 🔧 Librerías utilizadas
 
