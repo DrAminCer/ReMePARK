@@ -105,6 +105,28 @@ Este módulo evalúa la progresión del dolor en personas con Enfermedad de Park
 
 ---
 
+## 🩺 KPPS Severity Levels & Progression Analysis
+
+Este módulo analiza la severidad del dolor y su progresión longitudinal utilizando la escala King's Parkinson’s Disease Pain Scale (KPPS). Permite cuantificar cambios clínicos, clasificar severidad y evaluar predictores asociados al empeoramiento del dolor.
+
+📁 **Ubicación:** [`notebooks/severidad_KPPS/`](notebooks/Severidad_KPPS.ipynb)
+
+
+### Contenido principal
+
+| Sección | Descripción |
+|--------|-------------|
+| **Configuración longitudinal** | Cálculo de intervalos entre visitas (TimeDelta), identificación de Baseline y Endpoint por sujeto. |
+| **Análisis Pre–Post** | Cálculo de Δ KPPS, prueba de normalidad (Shapiro–Wilk) y Wilcoxon Signed-Rank para evaluar cambio clínico significativo. |
+| **Transición categórica**| Matrices de transición entre niveles de severidad y prueba de simetría de Bowker para evaluar cambios ordinales. |
+| **Factores asociados** | Evaluación de predictores demográficos y motores (sexo, edad, UPDRS, LEDD, duración de enfermedad) mediante χ² y Kruskal-Wallis. |
+| **Fenotipado de severidad** | Clasificación en grupos Mild, Moderate, Severe, Very Severe mediante cuartiles poblacionales. |
+| **Exportación** | Generación del archivo `Remepark_kpps_with_groups.xlsx` con el fenotipo final de severidad. |
+
+---
+
+
+
 ### 🔧 Librerías utilizadas
 
 - Python 3.9+  
