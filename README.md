@@ -145,6 +145,32 @@ Este módulo evalúa la relevancia clínica del cambio en el dolor utilizando la
 
 ---
 
+## 🧠 Control de calidad del MoCA
+
+Este módulo revisa la consistencia de los puntajes del **Montreal Cognitive Assessment (MoCA)** en bases de ReMePARK. Valida los ítems, recalcula subtotales y totales, y señala registros que requieren revisión contra el formulario original. El archivo de entrada no se modifica.
+
+📁 **Ubicación:** [`notebooks/QC_MoCA_ReMePARK_Colab.ipynb`](notebooks/QC_MoCA_ReMePARK_Colab.ipynb)
+
+### Contenido principal
+
+| Sección                      | Descripción                                                                                                                                                                 |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Validación de ítems**      | Detección de valores faltantes, no enteros o fuera del rango permitido para cada ítem.                                                                                      |
+| **Subtotales y total**       | Recálculo de los dominios y del puntaje total directamente a partir de los ítems; comparación con los valores registrados.                                                  |
+| **Corrección educativa**     | Verificación del punto adicional registrado en `PT.educ` y del total corregido, con límite de 30 puntos.                                                                    |
+| **Clasificación**            | Comparación de las categorías registradas con las esperadas según los puntos de corte de 26 y 24 utilizados en la base.                                                     |
+| **Memory Index Score (MIS)** | Verificación de su rango y de su compatibilidad con el recuerdo libre. No se recalcula el MIS exacto porque la base no contiene las respuestas con pistas y reconocimiento. |
+| **Reporte de incidencias**   | Exportación de un Excel con resumen por fila, detalle de hallazgos y copia de los datos originales.                                                                         |
+
+### Ejecución
+
+Abre el notebook en **Google Colab**, ejecuta las celdas en orden y sube un archivo Excel con los encabezados esperados y los registros en `Hoja1`. Al finalizar, se descargará `QC_MoCA_ReMePARK.xlsx`.
+
+Las incidencias indican datos que deben cotejarse con la fuente original. Una fila sin incidencias pasó las comprobaciones programadas, pero esto no confirma por sí solo la exactitud de las respuestas registradas ni constituye una clasificación diagnóstica.
+
+---
+
+---
 ### 🔧 Librerías utilizadas
 
 - Python 3.9+  
