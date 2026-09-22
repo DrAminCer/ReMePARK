@@ -149,7 +149,7 @@ Este módulo evalúa la relevancia clínica del cambio en el dolor utilizando la
 
 Este módulo revisa la consistencia de los puntajes del **Montreal Cognitive Assessment (MoCA)** en bases de ReMePARK. Valida los ítems, recalcula subtotales y totales, y señala registros que requieren revisión contra el formulario original. El archivo de entrada no se modifica.
 
-📁 **Ubicación:** [`notebooks/Validacion MoCA.ipynb`](notebooks/QC_MoCA_ReMePARK_Colab.ipynb)
+📁 **Ubicación:** [`notebooks/MoCA_validation.ipynb`](notebooks/QC_MoCA_ReMePARK_Colab.ipynb)
 
 ### Contenido principal
 
